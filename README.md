@@ -1,12 +1,14 @@
 # TS Training
 
+## Overview
+
 Test project for training and learning TypeScript for testers.
 
-This project is used incourse:
+Project provided by:
 
-[TypeScript dla Testera](https://jaktestowac.pl/course/typescript-dla-testera/)
+[jaktestowac.pl](https://jaktestowac.pl/course/typescript-dla-testera/)
 
-This a part of Program:
+This is a part of Program:
 
 [Testy Automatyczne z Playwright](https://jaktestowac.pl/playwright/)
 
