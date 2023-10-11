@@ -23,6 +23,31 @@
 //// TODO:
 //// -----------------------HERE PLACE YOUR SOLUTION:-------------------------
 
+class TransactionData {
+    id: string
+    version: number
+
+    constructor(id: string){
+        this.id = id
+        this.version = 0
+    }
+    // metoda ma zwracac this.version, a version ma typ number
+
+    doOperation(): number {
+        console.log('Last value of verion:', this.version )
+        this.version++
+        return this.version
+    }
+}
+
+const transactionValue = new TransactionData("123")
+transactionValue.doOperation()
+transactionValue.doOperation()
+transactionValue.doOperation()
+
+console.log(transactionValue.doOperation())
+
+
 //// -----------------------DONT MODIFY CODE BELOW!-------------------------
 // Here you will find expected result of exercise
 
