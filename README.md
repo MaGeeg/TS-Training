@@ -1,4 +1,4 @@
-# About
+# TS Training
 
 Test project for training and learning TypeScript for testers.
 
@@ -10,7 +10,7 @@ This a part of Program:
 
 [Testy Automatyczne z Playwright](https://jaktestowac.pl/playwright/)
 
-## How To:
+## How to run:
 
 you can run different modules using scripts from `package.json`
 
