@@ -27,6 +27,49 @@
 //// TODO:
 //// -----------------------HERE PLACE YOUR SOLUTION:-------------------------
 
+class Animal {
+    type: string
+    age: number
+
+    constructor(type: string) {
+       console.log("Set property type:")
+       this.type = type
+       this.age = 0
+    }
+}
+
+class Cat extends Animal{
+    constructor() {
+        super("cat")
+
+    }
+    //metoda nie przyjmuje żadnych argumentów i też nic nie zwraca, dlatego ustawiamy typ void
+    inceraseAge(): void {
+        this.age++
+    }
+
+    //metoda nie przyjmuje żadnych argumentów i zwraca wartość typu string
+    present(): string {
+        return `My type is "${this.type}" and my age is "${this.age}"`
+
+    }
+}
+
+// 3. Create object from class Cat
+
+const cat = new Cat()
+
+// 4. Invoke method increaseAge() 2 times
+
+cat.inceraseAge()
+cat.inceraseAge()
+
+// 5. Print return value of method present()
+
+console.log(cat.present())
+
+
+
 //// -----------------------DONT MODIFY CODE BELOW!-------------------------
 // Here you will find expected result of exercise
 

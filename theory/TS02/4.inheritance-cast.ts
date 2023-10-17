@@ -10,6 +10,7 @@ class BasePageElement {
         this.selector = "some css selector"
     }
 
+    //metoda udaje ze sprawdza czy dany el jest widoczny na stronie
     isVisible(): boolean {
         console.log("Action isVisible from BasePageElement class")
         return true
@@ -18,29 +19,33 @@ class BasePageElement {
 
 // Now lets define 2 subclasses:
 
+//klasa Button odpowiada za przycisk na stronie i dziedziczy po BasePageElement
 class Button extends BasePageElement {
     constructor() {
         super() // this is needed to invoke constructor from BasePage class!
         console.log("constructor from Button class")
     }
-
+    //metoda click udaje klikanie w el
     click(): void {
         console.log("Action click from Button class")
     }
 }
 
+//klasa reprezentująca pole tekstowe na stronie i i dziedziczy po BasePageElement
 class TextBox extends BasePageElement {
     constructor() {
         super() // this is needed to invoke constructor from BasePage class!
         console.log("constructor from TextBox class")
     }
 
+    //metoda focus udaje ustawienie kursora w polu tekstowym
     focus(): void {
         console.log("Action focus from TextBox class")
     }
 }
 
 // now create function to check if element is visible:
+//funkcja przyjmuje 1 param jako el o typie BasePageElement
 
 function checkIfVisible(element: BasePageElement) {
     console.log("checkIfVisible:", element)
@@ -48,6 +53,8 @@ function checkIfVisible(element: BasePageElement) {
 }
 
 // if we define base class, then we can pass there any object that is a sub class:
+//oba obiekty mają wspólny typ bazowy - posiadają metodę is visible
+//oba obiekty dziedziczą po klasie bazowej to możemy przekazac je do metody BasePageElement
 
 const button = new Button()
 const textBox = new TextBox()
@@ -79,6 +86,7 @@ checkIfVisible(textBox) // this is ok ✅
 console.log("\n--------Advanced Inheritance and instanceof--------\n")
 
 // We can check if object is an instance of a class:
+
 
 console.log("Check if button instanceof Button:", button instanceof Button)
 console.log("Check if button instanceof TextBox:", button instanceof TextBox)
