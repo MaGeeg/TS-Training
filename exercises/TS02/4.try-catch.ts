@@ -27,7 +27,13 @@ function getRandomValue(primaryIndex: number, secendaryIndex: number): string {
 //// -----------------------HERE PLACE YOUR SOLUTION:-------------------------
 
 function getRandomValueProxy(primaryIndex: number, secendaryIndex: number): string {
-    return getRandomValue(primaryIndex, secendaryIndex)
+
+    try {
+        return getRandomValue(primaryIndex, secendaryIndex)        
+    } catch {
+        console.log("An error occured!")
+    }
+    return "error!"    
 }
 
 //// -----------------------DONT MODIFY CODE BELOW!-------------------------

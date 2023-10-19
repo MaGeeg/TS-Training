@@ -97,6 +97,7 @@ console.log("\n--------Catching only selected types of Errors--------\n")
 // more You can find here: 🔗 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error#error_types
 
 try {
+    throw new Error("abc") // ten kawałek kodu sprawia że dalszy kod nie zostanie wykonany
     const emptyArray: string[] = []
     // Now lets try to access not existing element from list:
     console.log("The result of 'emptyArray[1]' is:", emptyArray[1])
